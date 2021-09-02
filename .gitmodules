@@ -1,0 +1,6 @@
+[submodule "lib/polyscope"]
+	path = lib/polyscope
+	url = https://github.com/nmwsharp/polyscope
+[submodule "lib/libigl"]
+	path = lib/libigl
+	url = https://github.com/libigl/libigl.git

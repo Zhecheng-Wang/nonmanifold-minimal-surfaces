@@ -2,6 +2,13 @@
 build/
 build_debug/
 
+# Libraries directories
+# lib/
+
+# CMake
+CMakeFiles
+CMakeCache.txt
+
 # Editor and OS things
 imgui.ini
 .DS_Store

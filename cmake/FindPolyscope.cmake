@@ -18,6 +18,7 @@ find_path(POLYSCOPE_INCLUDE_DIR polyscope/polyscope.h
         ${CMAKE_SOURCE_DIR}/../polyscope
         ${CMAKE_SOURCE_DIR}/../tools/polyscope
         ${CMAKE_SOURCE_DIR}/../../polyscope
+        ${CMAKE_SOURCE_DIR}/libs/polyscope
         /usr
         /usr/local
     PATH_SUFFIXES include
@@ -25,7 +26,7 @@ find_path(POLYSCOPE_INCLUDE_DIR polyscope/polyscope.h
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(Polyscope 
-    "\npolyscope not found"
+    "\npolyscope not found --- You can download it using:\n\tgit clone --recursive https://github.com/nmwsharp/polyscope.git ${CMAKE_SOURCE_DIR}/libs/polyscope"
     POLYSCOPE_INCLUDE_DIR)
 mark_as_advanced(POLYSCOPE_INCLUDE_DIR)
 

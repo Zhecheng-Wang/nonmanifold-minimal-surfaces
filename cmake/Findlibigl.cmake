@@ -21,20 +21,16 @@ find_path(LIBIGL_INCLUDE_DIR igl/readOBJ.h
         ${CMAKE_SOURCE_DIR}/libigl
         ${CMAKE_SOURCE_DIR}/../libigl
         ${CMAKE_SOURCE_DIR}/../../libigl
+        ${CMAKE_SOURCE_DIR}/libs/libigl
         /usr
         /usr/local
         /usr/local/igl/libigl
-        /home/zchen96/Projects/Tools/libigl
     PATH_SUFFIXES include
 )
 
-#set(LIBIGL_INCLUDE_DIR "C:/Users/csyzz/Projects/Tools/libigl/include")
-#set(LIBIGL_INCLUDE_DIR "/home/kiki/projects/tools/libigl/include")
-# set(LIBIGL_INCLUDE_DIR "/Users/chenzhen/UT/Research/Projects/Tools/libigl/include")
-
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(libigl
-    "\nlibigl not found --- You can download it using:\n\tgit clone --recursive https://github.com/libigl/libigl.git ${CMAKE_SOURCE_DIR}/../libigl"
+    "\nlibigl not found --- You can download it using:\n\tgit clone --recursive https://github.com/libigl/libigl.git ${CMAKE_SOURCE_DIR}/libs/polyscope"
     LIBIGL_INCLUDE_DIR)
 mark_as_advanced(LIBIGL_INCLUDE_DIR)
 

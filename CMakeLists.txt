@@ -14,6 +14,7 @@ find_package(libigl REQUIRED)
 # Find Polyscope
 find_package(Polyscope REQUIRED)
 
+# Find SuiteSparse
 find_package(SuiteSparse REQUIRED)
 include_directories(${SUITESPARSE_INCLUDE_DIRS} ${METIS_INCLUDE_DIR})
   

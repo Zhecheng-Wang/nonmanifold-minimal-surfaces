@@ -475,15 +475,16 @@ int main(int argc, char *argv[])
 
     polyscope::init();
 
-
     Eigen::VectorXd newindependent;
     Eigen::MatrixXd gradient;
     Eigen::MatrixXd descentDir;
     auto *prevMesh = polyscope::registerSurfaceMesh("Mesh 0", V, F);
 
+    int num_step = 100;
+
     for (int outer = 0; outer < 1; outer++)
     {
-        for (int inner = 0; inner < 10000; inner++)
+        for (int inner = 0; inner < num_step; inner++)
         {
             newton(independent, F, P, b, newindependent, gradient, descentDir);
             independent = newindependent;
@@ -497,8 +498,6 @@ int main(int argc, char *argv[])
         prevMesh->addVertexVectorQuantity("Gradient", gradient);
         prevMesh->addVertexVectorQuantity("Descent Dir", descentDir);        
     }
-
-
     
     // visualize!
     polyscope::show();
