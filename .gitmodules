@@ -4,3 +4,6 @@
 [submodule "lib/libigl"]
 	path = lib/libigl
 	url = https://github.com/libigl/libigl.git
+[submodule "lib/SuiteSparse"]
+	path = lib/SuiteSparse
+	url = https://github.com/DrTimothyAldenDavis/SuiteSparse.git
